@@ -1,0 +1,354 @@
+/*!
+*
+* 修改header
+*
+*/
+
+.notebook_app {
+    overflow-y: hidden;
+}
+
+.notebook_app #header {
+    box-shadow:12px 1px 0px 0px rgba(87, 87, 87, 0.2);
+    border-bottom: 1px solid rgba(87, 87, 87, 0.2);
+}
+
+body > #header #header-container,
+body > #header .header-bar {
+    display:none;
+}
+
+#menubar .navbar {
+    border-top:none;
+    border-radius: none!important;
+    border-color: #fff;
+}
+
+#menubar .navbar-collapse {
+    background: #fff;
+    border-color:#fff;
+}
+
+#menubar .navbar-nav {
+    display:none;
+}
+
+#maintoolbar {
+    display: none;
+}
+
+.container-fluid {
+    background-color: #fff;
+}
+
+#notification_trusted.notification_widget {
+    height: 33px;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border:none;
+    cursor: inherit;
+}
+
+#notification_trusted span{
+    display: none;
+}
+
+.download-code {
+    float: right;
+    margin: 3px 5px;
+    padding: 0 10px;
+    border: 1px solid #08bf91;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #08bf91;
+    cursor: pointer;
+}
+
+/*!
+* 改变代码块的样式，与实验楼想匹配
+*/
+
+.code_cell .CodeMirror {
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    line-height: 1em;
+}
+
+div.text_cell .inner_cell {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+div.text_cell .rendered_html {
+    font-weight: 200;
+}
+
+.rendered_html p code {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+.rendered_html code{
+    color: #c7254e;
+    background-color: #f9f2f4;
+}
+.rendered_html pre {
+    background-color: #f9f2f4;
+    padding:0.5em;
+    border:1px solid #ccc;
+}
+
+.rendered_html pre code {
+    color: #000;
+    background-color: transparent;
+}
+
+/* 代码块keyword颜色 */
+.code_cell .cm-s-ipython span.cm-keyword {
+    color: #f92672;
+}
+/* 代码块数字颜色 */
+.code_cell .cm-s-ipython span.cm-number {
+    color: #ae81ff;
+    font-weight: bold;
+}
+/* 代码块string颜色 */
+.code_cell .cm-s-ipython span.cm-string {
+    color: #e6db74;
+}
+
+.code_cell .cm-s-ipython span.cm-operator {
+    color: #f8f8f2;
+}
+
+.code_cell .cm-s-ipython span.cm-variable {
+    color: #f8f8f2;
+}
+
+.code_cell .cm-s-ipython span.cm-error {
+    color: #f8f8f2;
+}
+
+.code_cell .cm-s-ipython span.cm-def {
+    color: #a6e22e;
+    font-size: 16px;
+}
+
+.code_cell .cm-s-ipython span.cm-comment {
+    color: #75715e;
+    font-style: italic;
+}
+
+
+.code_cell .cm-s-ipython span.cm-variable-2 {
+    color: #f8f8f2;
+}
+
+.code_cell .CodeMirror pre {
+    padding: 0.2em 0.4em;
+}
+
+/* 修改光标的颜色 */
+div.code_cell .CodeMirror-cursor {
+    border-left: 1.4px solid #fff !important;
+}
+
+/* 代码块工具栏 */
+
+#notebook div.code_cell,
+#notebook div.text_cell {
+    position:relative;
+    margin-top: 20px;
+}
+
+#notebook div.code_cell .run-code-btn,
+#notebook div.text_cell .run-code-btn {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    background-color: #fff;
+    font-size: 30px;
+    color: #08bf91;
+    cursor: pointer;
+}
+
+#notebook div.selected .run-code-btn {
+    display:block;
+}
+
+#notebook div.unselected .run-code-btn {
+    display:none;
+}
+
+#notebook div.code_cell .code-tools,
+#notebook div.text_cell .code-tools {
+    position: absolute;
+    top: -20px;
+    right: 6px;
+    height: 25px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+#notebook div.text_cell .code-tools {
+    top: -27px;
+}
+
+#notebook div.text_cell span.markdown-btn {
+    color: #08bf91;
+}
+
+#notebook div.text_cell span.code-btn {
+    color: #333;
+}
+
+#notebook div.code_cell span.markdown-btn {
+    color: #333;
+}
+
+#notebook div.code_cell span.code-btn {
+    color: #08bf91;
+}
+
+#notebook div.selected .code-tools {
+    display: block;
+}
+
+#notebook div.unselected .code-tools {
+    display: none;
+}
+
+#notebook div.code_cell .tool-container,
+#notebook div.text_cell .tool-container {
+    display:inline-block;
+    padding: 1px 5px;
+    border: 1px solid rgb(248, 248, 248);
+    font-size: 10px;
+}
+
+#notebook div.code_cell .tool-container span,
+#notebook div.text_cell .tool-container span {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#notebook div.code_cell .tool-container span .btn-tooltip,
+#notebook div.text_cell .tool-container span .btn-tooltip {
+    position: absolute;
+    top: -30px;
+    border-radius: 4px;
+    padding: 2px 10px;
+    color: #fff;
+    white-space: nowrap;
+    background-color: #000;
+    z-index: 11;
+    font-size: 12px;
+}
+
+#notebook div.code_cell .tool-container span .btn-tooltip::before,
+#notebook div.text_cell .tool-container span .btn-tooltip::before {
+    content: "";
+    position: absolute;
+    right: calc(50% - 5px);
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border: #000 5px solid;
+    border-color: #000 transparent transparent transparent;
+}
+
+#notebook div.code_cell .tool-container span.select,
+#notebook div.text_cell .tool-container span.select {
+    font-weight:bold;
+}
+
+#notebook div.code_cell .tool-container span:hover,
+#notebook div.code_cell .tool-container span:focus,
+#notebook div.text_cell .tool-container span:hover,
+#notebook div.text_cell .tool-container span:focus {
+    color: #08bf91;
+}
+
+#notebook div.code_cell .tool-container.add-cell span,
+#notebook div.text_cell .tool-container.add-cell span {
+    background-color: #08bf91;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#notebook div.code_cell .tool-container.add-cell span:hover,
+#notebook div.code_cell .tool-container.add-cell span:focus,
+#notebook div.text_cell .tool-container.add-cell span:hover,
+#notebook div.text_cell .tool-container.add-cell span:focus {
+    color: #fff;
+}
+
+#notebook div.code_cell .tool-container.delete-cell span,
+#notebook div.text_cell .tool-container.delete-cell span {
+    color: #ff5c5d;
+    font-size: 16px;
+}
+
+#notebook div.code_cell .tool-container.delete-cell span:hover,
+#notebook div.code_cell .tool-container.delete-cell span:focus,
+#notebook div.text_cell .tool-container.delete-cell span:hover,
+#notebook div.text_cell .tool-container.delete-cell span:focus {
+    color: #ff5c5d;
+}
+
+#notification_area {
+    float: left !important;
+}
+
+.text_cell.rendered .rendered_html {
+    padding: 0;
+}
+
+.notebook_app #header {
+    box-shadow: none;
+    border: none;
+}
+
+#kernel_indicator {
+  border: none;
+}
+
+#menubar-container {
+    overflow: hidden;
+}
+#menubar {
+    float: right;
+}
+#maintoolbar {
+    display: block;
+    float: left;
+    width: 30px;
+}
+#maintoolbar-container .btn-group,
+#maintoolbar-container #cell_type {
+    display: none;
+}
+#maintoolbar-container #run_int {
+    display: block;
+}
+#maintoolbar-container #run_int .btn {
+    display: none;
+}
+#maintoolbar-container #run_int .btn[data-jupyter-action="jupyter-notebook:interrupt-kernel"] {
+    display: block;
+    border-left: solid 2px #ccc;
+}
+#maintoolbar-container #run_int .btn[data-jupyter-action="jupyter-notebook:confirm-restart-kernel"] {
+    display: block;
+}
